@@ -71,7 +71,7 @@ button{
     -webkit-transition: all 0.45s;
     -moz-transition: all 0.45s;
 }
-
+ /* Fixed hover of hard and easy button*/
 button:hover{
     background:rgb(2, 149, 194);
     color:rgba(250, 245, 245, 0.836);
