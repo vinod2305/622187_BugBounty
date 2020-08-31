@@ -17,6 +17,8 @@ FORMAT: xxxxxxxx08
 
 GOOD LUCK! 
 MAY THE BUG BE WITH YOU
+
+Password : AsianMarioKart
 */
 
 #include<stdio.h>
@@ -25,18 +27,18 @@ MAY THE BUG BE WITH YOU
 #include "helpers.h"
 
 
-int funct(n)
+int funct(int n)
 {
-    if(n==0) 
+    if(n==0 || n==1) 
     {
-        return 0;
+        return n;
     }
     return n+funct(n-2);
 }
 
 int main()
 {
-    int num,ans
+    int num,ans;
     num=getNum();       
     ans=funct(num);
 
