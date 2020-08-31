@@ -32,7 +32,9 @@ $("input[type='text']").keypress(function(event){
     {
         $(".todo-list").append("<li ><span><i class='fa fa-trash-alt'></i></span> " + $(this).val() + "<span style='float:right'><i class='fa fa-heart'></i></span></li>");
         $(this).val("");
+        $("input").hide();
     }
+    
 });
 
 $("ul").on("click",".fa-heart",function(event){
