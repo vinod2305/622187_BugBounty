@@ -49,23 +49,24 @@ function setupButtons() {
     newGame.addEventListener("mousehover", function () {
         newGame.style.background = "rgb(2, 160, 194)";
         newGame.style.color = "white";
-    })
+    });
 
     //when hovering the mouse away from the new Color
     newGame.addEventListener("mouseout", function () {
         newGame.style.background = "white";
         newGame.style.color = "rgb(2, 160, 194)";
-    })
+    });
 
     //when clicked New Game
     newGame.addEventListener("click", function () {
+        console.log("hello");
         if (difficultyLevel == "Easy")
             //3 squares are required
             resetGame(3);
         else
             //6 squares are required
             resetGame(6);
-    })
+    });
 
     //when easy button is selected
     easyBtn.addEventListener("click", function () {
@@ -120,6 +121,7 @@ function generateRandomColors(number) {
         var colorValue = "rgb(" + red + ", " + green + ", " + blue + ")";
         colorsArray.push(colorValue);
     }
+    console.log(colorsArray);
     return colorsArray;
 }
 
@@ -127,10 +129,12 @@ function generateRandomColors(number) {
 function resetGame(number) {
     newGame.textContent = "New Colors"
     colors = generateRandomColors(number);
-
+    console.log(colors);
     //to change the colors of the squares
+    //Made changes to make New colors work
     for (var i = 0; i < colors.length; i++)
-        squares.style.background = colors[i];
+        squares[i].style.background = colors[i];
+        
 
     pickedColor = pickColor();
     colorDisplay.textContent = pickedColor;
