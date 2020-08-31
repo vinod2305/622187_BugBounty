@@ -45,8 +45,9 @@ function setupSquares() {
 
 
 function setupButtons() {
+    //Fixed mouse hovering over New color button
     //when hovering the mouse over newcolor
-    newGame.addEventListener("mousehover", function () {
+    newGame.addEventListener("mouseover", function () {
         newGame.style.background = "rgb(2, 160, 194)";
         newGame.style.color = "white";
     });
@@ -59,7 +60,6 @@ function setupButtons() {
 
     //when clicked New Game
     newGame.addEventListener("click", function () {
-        console.log("hello");
         if (difficultyLevel == "Easy")
             //3 squares are required
             resetGame(3);
@@ -97,8 +97,11 @@ function setupButtons() {
 
 // for changing the color of each square
 function changeColor(color) {
+    //Fixed changing all tiles color to same, when player chooses right color
     for (var i = 0; i < colors.length; i++)
-        squares[i].style.color = color;
+        squares[i].style.background = color;
+    
+        
 }
 
 //for picking a random color
@@ -121,7 +124,6 @@ function generateRandomColors(number) {
         var colorValue = "rgb(" + red + ", " + green + ", " + blue + ")";
         colorsArray.push(colorValue);
     }
-    console.log(colorsArray);
     return colorsArray;
 }
 
@@ -129,7 +131,6 @@ function generateRandomColors(number) {
 function resetGame(number) {
     newGame.textContent = "New Colors"
     colors = generateRandomColors(number);
-    console.log(colors);
     //to change the colors of the squares
     //Made changes to make New colors work
     for (var i = 0; i < colors.length; i++)
