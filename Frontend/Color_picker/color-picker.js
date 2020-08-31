@@ -73,8 +73,8 @@ function setupButtons() {
         //to change the background of the buttons
         easyBtn.classList.add("selected");
         hardBtn.classList.remove("selected");
-
-        resetGame(3);
+        //Removed resetGame(3); to make easy and hard work
+        //resetGame(3);
         for (var i = 3; i <= 5; i++)
             squares[i].style.display = "none";
         difficultyLevel = "Easy";
