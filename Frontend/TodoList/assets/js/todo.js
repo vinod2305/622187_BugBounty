@@ -14,14 +14,14 @@ $("ul").on("click",".fa-trash-alt",function(event){
 
 // when add button is clicked
 $(".fa-plus").click(function(){
-    $("input").hide();
+    $("input").show();
     $(".fa-plus").hide();
     $(".fa-minus").show();
     
 });
 
 $(".fa-minus").click(function(){
-    $("input").show();
+    $("input").hide();
     $(".fa-plus").show();
     $(".fa-minus").hide();
 });
