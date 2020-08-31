@@ -17,23 +17,26 @@ function delButton() {
 }
 
 async function fetchKantoPokemon() {
-  let url = "https://pokeapi.co/api/v2/pokemon?limit=1";
+  //Added new pokemons with stats in the object
+  let url = "https://pokeapi.co/api/v2/pokemon?limit=18";
   for (let i = 0; i < 18; i++) {
     let response = await fetch(url);
     let data = await response.json();
     const newPokemon = new Pokemon({
-      name: data.results[0].name,
-      apiURL: data.results[0].url,
+      name: data.results[i].name,
+      apiURL: data.results[i].url,
     });
     const pokeData = await fetchPokemonData(newPokemon);
-    newPokemon.imageURL = `https://pokeres.bastionbot.org/images/pokemon/${pokeData.id}.png`;
     newPokemon.stats = pokeData.stats;
+    console.log(newPokemon);
+    newPokemon.imageURL = `https://pokeres.bastionbot.org/images/pokemon/${pokeData.id}.png`;
+    
     renderPokemon(newPokemon);
   }
 }
 
 async function fetchPokemonData(pokemon) {
-  let url = pokemon.api;
+  let url = `https://pokeapi.co/api/v2/pokemon/${pokemon.name}`;
   let response = await fetch(url);
   let pokedata = await response.json();
   return pokedata;

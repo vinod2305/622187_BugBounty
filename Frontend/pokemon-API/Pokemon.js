@@ -10,7 +10,7 @@ class Pokemon {
   }
 
   get imageURL() {
-    return `https://pokeres.bastionbot.org/images/pokemon/${this.pokeID}.png`;
+    return `https://pokeres.bastionbot.org/images/pokemon/${this.name}.png`;
   }
 
   get api() {
