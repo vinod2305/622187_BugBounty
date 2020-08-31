@@ -1,6 +1,6 @@
 // when a task is clicked when its done
 
-$("ul").on("click","li",function(){
+$("ul").on("dblclick","li",function(){
   $(this).toggleClass("taskDone");
 });
 
@@ -30,7 +30,7 @@ $(".fa-minus").click(function(){
 $("input[type='text']").keypress(function(event){
     if(event.which===13)
     {
-        $("ul").append("<li ><span><i class='fa fa-trash-alt'></i></span> " + $(this).val() + "<span style='float:right'><i class='fa fa-heart'></i></span></li>");
+        $(".todo-list").append("<li ><span><i class='fa fa-trash-alt'></i></span> " + $(this).val() + "<span style='float:right'><i class='fa fa-heart'></i></span></li>");
         $(this).val("");
     }
 });
