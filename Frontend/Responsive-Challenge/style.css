@@ -17,22 +17,30 @@ body {
 	background: #23424a;
 	color: white;
 	width: 100%;
+}
+
+.btn{
+	text-decoration: none;
+}
+
+.box-container{
+	width: 600px;
 	display: flex;
-	align-items: center;
+	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	padding: 100px;
 }
 
-.box-container{
-	width: 1200px;
-}
-
 .subtitle{
 	padding: 0;
-	margin: 5px 0;
+	margin: 35px 0;
+	width: 550px;
 }
 
+.heading{
+	width: 500px;
+}
 
 
 footer {
