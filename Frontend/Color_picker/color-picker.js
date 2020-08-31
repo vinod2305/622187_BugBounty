@@ -78,6 +78,8 @@ function setupButtons() {
         //resetGame(3);
         for (var i = 3; i <= 5; i++)
             squares[i].style.display = "none";
+        //Reseting the game when easy is pressed
+        resetGame(3);
         difficultyLevel = "Easy";
     });
 
