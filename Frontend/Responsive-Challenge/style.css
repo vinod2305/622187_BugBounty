@@ -20,7 +20,21 @@ body {
 }
 
 .btn{
-	text-decoration: none;
+	display: inline-block;
+  padding: 15px 5px;
+  font-size: 17px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: #38cfd8;
+  border: none;
+  border-radius: 25px;
+  text-transform: uppercase;
+  color: #24424a;
+  font-weight: bold;
+  width: 200px;
 }
 
 .box-container{
@@ -100,4 +114,86 @@ p{
 
 @media (max-width: 850px){
 
+	
+	.btn{
+		display: inline-block;
+	  padding: 15px 5px;
+	  font-size: 17px;
+	  cursor: pointer;
+	  text-align: center;
+	  text-decoration: none;
+	  outline: none;
+	  color: #fff;
+	  background-color: #38cfd8;
+	  border: none;
+	  border-radius: 25px;
+	  text-transform: uppercase;
+	  color: #24424a;
+	  font-weight: bold;
+	  width: 200px;
+	}
+	.box-container{
+		width: auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		padding: 65px 40px;
+	}
+	.subtitle{
+		padding: 0;
+		margin: 35px 0;
+		width: auto;
+	}
+	
+	.heading{
+		width: auto;
+	}	
+	.details{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+	
+	.footer-details{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		color: #ffffff;
+	}
+	
+	
+	.card{
+		width: 400px;
+		padding: 10px;
+		margin: 20px 0;
+		text-align: center;
+	}
+	
+	.footer-card{
+		width: 400px;
+		padding: 10px;
+		margin: 20px 0;
+		text-align: center;
+	}
+	
+	h2{
+		font-size: 30px;
+		padding: 10px;
+	}
+	
+	p{
+		font-size: 17px;
+		padding: 10px;
+	}
+	
+	.credentials{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 30px;
+	}
+	
 }
