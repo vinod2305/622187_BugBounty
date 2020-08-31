@@ -99,6 +99,9 @@ function deleteEverything(event) {
   renderBtn.innerText = "Generate Pokemon";
   renderBtn.id = "generate-pokemon";
   renderBtn.classList.add("ui", "inverted", "yellow", "button");
+  //Fixed delete and render of pokemons
+  renderBtn.addEventListener('click', generatePokemons);
+
   pokemonDiv.append(renderBtn);
 }
 
