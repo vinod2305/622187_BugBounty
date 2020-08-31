@@ -26,7 +26,10 @@ INPUT:
 OUTPUT: 
     1. The OUTPUT Printed on your console is key to enter into website.
     2. The OUTPUT is of the format: XXXXXXXohw
-        
+
+output : KEY: hjjedgkohw
+
+Password is : YouDidntGetTheWingsStill
 */
 
 #include <stdio.h>
@@ -40,18 +43,16 @@ int main() {
     
     char *s;
     s = getString();
-    int arr[12],a;
+    int arr[10]={0},a;
     for (int i=0; i< strlen(s); i++) 
     {
         if(isdigit(s[i]))
             {
-                a=(int)(s[i]-);
-                printf(" %c %d ",s[i],a);
+                a=(int)(s[i]-'0');
                 arr[a]++;
             }
         
     }
-    printf("\n");
     hash(arr);  
     return 0;
 }
