@@ -72,7 +72,7 @@ button{
     -moz-transition: all 0.45s;
 }
 
-.button:hover{
+button:hover{
     background:rgb(2, 149, 194);
     color:rgba(250, 245, 245, 0.836);
 }
