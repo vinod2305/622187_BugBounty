@@ -28,9 +28,8 @@ async function fetchKantoPokemon() {
     });
     const pokeData = await fetchPokemonData(newPokemon);
     newPokemon.stats = pokeData.stats;
-    console.log(newPokemon);
-    newPokemon.imageURL = `https://pokeres.bastionbot.org/images/pokemon/${pokeData.id}.png`;
     
+    newPokemon.imageURL =  `https://pokeres.bastionbot.org/images/pokemon/${pokeData.id}.png`;
     renderPokemon(newPokemon);
   }
 }
@@ -46,8 +45,8 @@ function renderPokemon(pokemon) {
   let pokemonDiv = document.getElementById("pokemon");
   let pokeDiv = document.createElement("div");
   pokeDiv.classList.add("card");
-
-  pokemonImage(pokemon.imageURL, pokeDiv);
+  //Fixed images
+  pokemonImage(pokemon.pokeID, pokeDiv);
   pokemonToolTip(pokemon.stats, pokeDiv);
 
   let pokeName = document.createElement("h4");
@@ -100,6 +99,9 @@ function deleteEverything(event) {
   renderBtn.innerText = "Generate Pokemon";
   renderBtn.id = "generate-pokemon";
   renderBtn.classList.add("ui", "inverted", "yellow", "button");
+  //Fixed delete and render of pokemons
+  renderBtn.addEventListener('click', generatePokemons);
+
   pokemonDiv.append(renderBtn);
 }
 
