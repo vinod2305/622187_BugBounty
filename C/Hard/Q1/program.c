@@ -42,6 +42,8 @@
     
     
     KEY FORMAT: XXXXXXXX29
+    Key : 3149751329
+    Password is : WhoISBinod?
 */
 
 #include <stdio.h>
@@ -55,14 +57,15 @@
 
 int main()
 {
-    const ans[10];
+    char ans[10];
     int inputArraySize = 5;
     char *str;
-
+    for(int i=0;i<5;i++){
     str = malloc(2000 * sizeof(char));
-    str = inputArray[inputArraySize];
+    str = inputArray[i];
+    // printf("%s", str);
     setArray(str);
-
+    }
     printf("Key : %u\n", hash2(hash(ans)));
 
     return 0;
@@ -71,8 +74,9 @@ int main()
 int lps(char *str)
 {
     int length = strlen(str);
-    bool table[length - 1][length - 1]; // 2D boolean array of size 'length'
-    memset(table, 1, sizeof(table));    //In the code below, table[i][j] will be set to true if substring str[i..j] is palindrome.
+
+    bool table[length][length]; // 2D boolean array of size 'length'
+    memset(table, 0, sizeof(table));    //In the code below, table[i][j] will be set to true if substring str[i..j] is palindrome.
     int maxLength = 1;                  //Every string of length is palindrome
 
     // check for sub-string of length 2.
@@ -87,25 +91,25 @@ int lps(char *str)
             maxLength = 2;
         }
     }
-
     // Check for lengths greater than 2. 'k' is the length of substring
-    for (int k = 4; k <= length; ++k)
+    for (int k = length-1; k >=0; k--)
     {
-        for (int i = 0; i < length - k + 1; ++i)
+        for (int i = k+2; i <length; i++)
         {
-            int j = i + k - 1;
+            
 
             // checking for sub-string from ith index to jth index if str[i+1] to str[j-1] is a palindrome
-            if (table[i - 1][j + 1] && str[i] == str[j])
+            
+            if (table[k+1][i-1] && str[i] == str[k])
             {
-                table[i][j] = true;
+                table[k][i] = true;
 
-                if (k > maxLength)
-                    maxLength = k;
+                if (i-k+1 > maxLength)
+                    maxLength = i-k+1;
             }
         }
     }
-
     //Return max length of LPS
+    // printf("%d\n",maxLength);
     return maxLength;
 }
