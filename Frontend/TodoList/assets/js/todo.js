@@ -1,8 +1,17 @@
 // when a task is clicked when its done
 
-$("ul").on("dblclick","li",function(){
+$("ul").on("click","li",function(){
+    attrclass=$(this).attr("class");
+    if(!attrclass)
   $(this).toggleClass("taskDone");
 });
+
+$("ul").on("dblclick","li",function(){
+    attrclass=$(this).attr("class");
+    if(attrclass)
+  $(this).toggleClass("taskDone");
+});
+
 
 // when X is clicked to delete the entry from the list
 $("ul").on("click",".fa-trash-alt",function(event){

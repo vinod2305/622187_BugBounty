@@ -67,7 +67,7 @@ img {
     padding:10px 5px;
 }
 
-
+.card:hover .tooltip { display: block; }
 
 .tooltip-row{
     display:flex;
