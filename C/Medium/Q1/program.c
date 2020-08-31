@@ -13,6 +13,10 @@ OUTPUT:
     The output is a string in the format specified in the problem statement.
 
 Key: XXXX58
+
+Congratulations! Here is the key: 235458
+
+Password is : PubgVSMineCraft
 */
 
 #include <stdio.h>
@@ -23,7 +27,7 @@ long p = 0;
 
 void swap(char *x, char *y)
 {
-    int temp = *x;
+    char temp = *x;
     *x = *y;
     *y = temp;
 }
@@ -33,9 +37,9 @@ void Sort(char arr[], int n)
     int i, j;
     for (i = 0; i < n - 1; i++)
     {
-        for (j = 0; j < n - i - 1; j++)
+        for (j = 0; j < n - 1; j++)
         {
-            if (arr[i] > arr[i + 1])
+            if (arr[j] > arr[j + 1])
             {
                 swap(&arr[j], &arr[j + 1]);
                 p++; //Just a counter, ignore this  ///// DO NOT CHANGE THIS LINE /////
@@ -69,10 +73,9 @@ void countDups(char orig[], int count[], int n, int newLength)
 
     for (i = 0; i < newLength; i++)
     {
-        count[i] = 0;
-        p += count[i] //Just a counter, ignore this  ///// DO NOT CHANGE THIS LINE /////
+        count[i] = 1;
+        p += count[i]; //Just a counter, ignore this  ///// DO NOT CHANGE THIS LINE /////
     }
-
     for (i = 0; i < n - 1; i++)
     {
         if (orig[i] == orig[i + 1])
@@ -90,10 +93,11 @@ void countDups(char orig[], int count[], int n, int newLength)
 void Group(char arr[], int n)
 {
     int newLength, i = 0;
-    int orig[n];
+    char orig[n];
     for (i = 0; i < n; i++)
     {
         orig[i] = arr[i];
+        
     }
     newLength = removeDups(arr, n);
     int *count = (int *)malloc(newLength * sizeof(int));
