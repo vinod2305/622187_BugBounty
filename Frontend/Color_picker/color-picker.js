@@ -26,7 +26,6 @@ function setupSquares() {
     for (var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = colors[i];
         squares[i].style.cursor = "pointer";
-
         squares[i].addEventListener("click", function () {
             //when u win the game
             if (this.style.backgroundColor == pickedColor) {
@@ -36,7 +35,9 @@ function setupSquares() {
                 newGame.textContent = "Play Again";
             }
             else {
+                //Fixed removing of wrong squares
                 messageDisplay.textContent = "Try Again!!";
+                this.style.background="black";
             }
             messageDisplay.style.color = "black";
         })
