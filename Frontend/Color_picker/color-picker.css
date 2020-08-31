@@ -1,0 +1,90 @@
+body{
+    background:black;
+    margin:0px;
+    font-family:"Avenir";
+    border:0;
+}
+
+.square{
+    width:30%;
+    float:left;
+    margin:1.66%;
+    padding-bottom:30%;
+    background:green;
+    border-radius: 20%;
+    transition: background 0.6s;
+    -webkit-transition: background 0.6s;
+    -moz-transition: background 0.6s;
+}
+
+#container{
+    margin:0 auto;
+    width:600px;
+}
+
+h1{
+    background:rgb(2, 149, 194);
+    margin:0px;
+    font-variant:small-caps;
+    text-align:center;
+    color:white;
+}
+
+.colorDisplay{
+    font-size:180%;
+    color:white;
+}
+
+#message{
+    font-size:150%;
+    font-variant:small-caps;
+    color:black;
+    text-align:center;
+    display:inline-block;
+    width:20%;
+}
+
+.gameControl{
+    background:white;
+}
+
+#newColor
+{
+    color:rgb(2, 149, 194);
+    margin-left:30%;
+    margin-bottom: 10px;
+    font-size:128%;
+    font-stretch:expanded;
+}
+
+.selected{
+    background:rgb(2, 149, 194);
+    color:white;
+}
+
+button{
+    border:none;
+    background-color: white;
+    height:100%;
+    font-weight: 700;
+    transition: all 0.45s;
+    -webkit-transition: all 0.45s;
+    -moz-transition: all 0.45s;
+}
+
+.button:hover{
+    background:rgb(2, 149, 194);
+    color:rgba(250, 245, 245, 0.836);
+}
+
+#easyBtn{
+    font-size:128%;
+    font-variant:small-caps;
+    font-stretch:expanded;
+}
+
+#hardBtn{
+    font-size:128%;
+    font-variant:small-caps;
+    font-stretch:expanded;
+}
